@@ -15,6 +15,7 @@
 		52F707351FC3597F002DF8D5 /* Evaluation_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F707341FC3597F002DF8D5 /* Evaluation_Tests.swift */; };
 		52F707401FC3597F002DF8D5 /* Evaluation_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7073F1FC3597F002DF8D5 /* Evaluation_UITests.swift */; };
 		52F7074E1FC359E3002DF8D5 /* CreatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7074D1FC359E3002DF8D5 /* CreatorController.swift */; };
+		52F707501FC35B07002DF8D5 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7074F1FC35B07002DF8D5 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		52F7073F1FC3597F002DF8D5 /* Evaluation_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluation_UITests.swift; sourceTree = "<group>"; };
 		52F707411FC3597F002DF8D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52F7074D1FC359E3002DF8D5 /* CreatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorController.swift; sourceTree = "<group>"; };
+		52F7074F1FC35B07002DF8D5 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,9 @@
 		52F7071E1FC3597F002DF8D5 /* Evaluation+ */ = {
 			isa = PBXGroup;
 			children = (
+				52F707521FC35CA4002DF8D5 /* Controlleurs */,
+				52F707511FC35C91002DF8D5 /* Classes */,
 				52F7071F1FC3597F002DF8D5 /* AppDelegate.swift */,
-				52F707211FC3597F002DF8D5 /* MainController.swift */,
-				52F7074D1FC359E3002DF8D5 /* CreatorController.swift */,
 				52F707231FC3597F002DF8D5 /* Main.storyboard */,
 				52F707261FC3597F002DF8D5 /* Assets.xcassets */,
 				52F707281FC3597F002DF8D5 /* LaunchScreen.storyboard */,
@@ -126,6 +128,23 @@
 				52F707411FC3597F002DF8D5 /* Info.plist */,
 			);
 			path = "Evaluation+UITests";
+			sourceTree = "<group>";
+		};
+		52F707511FC35C91002DF8D5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				52F7074F1FC35B07002DF8D5 /* UserDefaultsManager.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		52F707521FC35CA4002DF8D5 /* Controlleurs */ = {
+			isa = PBXGroup;
+			children = (
+				52F7074D1FC359E3002DF8D5 /* CreatorController.swift */,
+				52F707211FC3597F002DF8D5 /* MainController.swift */,
+			);
+			path = Controlleurs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +283,7 @@
 			files = (
 				52F707221FC3597F002DF8D5 /* MainController.swift in Sources */,
 				52F707201FC3597F002DF8D5 /* AppDelegate.swift in Sources */,
+				52F707501FC35B07002DF8D5 /* UserDefaultsManager.swift in Sources */,
 				52F7074E1FC359E3002DF8D5 /* CreatorController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
