@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				52F707521FC35CA4002DF8D5 /* Controlleurs */,
-				52F707511FC35C91002DF8D5 /* Classes */,
+				52F707511FC35C91002DF8D5 /* Class */,
 				52F7071F1FC3597F002DF8D5 /* AppDelegate.swift */,
 				52F707231FC3597F002DF8D5 /* Main.storyboard */,
 				52F707261FC3597F002DF8D5 /* Assets.xcassets */,
@@ -130,12 +130,12 @@
 			path = "Evaluation+UITests";
 			sourceTree = "<group>";
 		};
-		52F707511FC35C91002DF8D5 /* Classes */ = {
+		52F707511FC35C91002DF8D5 /* Class */ = {
 			isa = PBXGroup;
 			children = (
 				52F7074F1FC35B07002DF8D5 /* UserDefaultsManager.swift */,
 			);
-			path = Classes;
+			path = Class;
 			sourceTree = "<group>";
 		};
 		52F707521FC35CA4002DF8D5 /* Controlleurs */ = {
