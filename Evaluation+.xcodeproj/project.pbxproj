@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52AEEF761FC8A38600C77C9F /* cores.png in Resources */ = {isa = PBXBuildFile; fileRef = 52AEEF751FC8A38600C77C9F /* cores.png */; };
+		52AEEF781FC8A66A00C77C9F /* concordialogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52AEEF771FC8A66A00C77C9F /* concordialogo.jpg */; };
 		52F707201FC3597F002DF8D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7071F1FC3597F002DF8D5 /* AppDelegate.swift */; };
 		52F707221FC3597F002DF8D5 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F707211FC3597F002DF8D5 /* MainController.swift */; };
 		52F707251FC3597F002DF8D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F707231FC3597F002DF8D5 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		52AEEF751FC8A38600C77C9F /* cores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cores.png; path = working/cores.png; sourceTree = SOURCE_ROOT; };
+		52AEEF771FC8A66A00C77C9F /* concordialogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = concordialogo.jpg; sourceTree = "<group>"; };
 		52F7071C1FC3597F002DF8D5 /* Evaluation+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Evaluation+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F7071F1FC3597F002DF8D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52F707211FC3597F002DF8D5 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		52AEEF741FC8A36000C77C9F /* image */ = {
 			isa = PBXGroup;
 			children = (
+				52AEEF771FC8A66A00C77C9F /* concordialogo.jpg */,
 				52AEEF751FC8A38600C77C9F /* cores.png */,
 			);
 			path = image;
@@ -268,6 +271,7 @@
 				52AEEF761FC8A38600C77C9F /* cores.png in Resources */,
 				52F7072A1FC3597F002DF8D5 /* LaunchScreen.storyboard in Resources */,
 				52F707271FC3597F002DF8D5 /* Assets.xcassets in Resources */,
+				52AEEF781FC8A66A00C77C9F /* concordialogo.jpg in Resources */,
 				52F707251FC3597F002DF8D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

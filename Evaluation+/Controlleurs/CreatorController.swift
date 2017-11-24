@@ -1,5 +1,5 @@
 //
-//  GrandeController.swift
+//  gradeController.swift
 //  cours_13
 //
 //  Created by João Carlos Fernandes Neto on 17-11-24.
@@ -12,10 +12,10 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
     //---\\      *      //---\\
     let userDefaultsObj = UserDefaultsManager()
     //---\\      *      //---\\
-    @IBOutlet weak var grandeField: UITextField!
+    @IBOutlet weak var gradeField: UITextField!
     @IBOutlet weak var couseField: UITextField!
     @IBOutlet weak var student_name_label: UILabel!
-    @IBOutlet weak var course_grande_tableveiw: UITableView!
+    @IBOutlet weak var course_grade_tableveiw: UITableView!
     //---\\      *      //---\\
     typealias studentName = String
     typealias couseName = String
@@ -36,19 +36,19 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
         return arrayOfCourse.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = course_grande_tableveiw.dequeueReusableCell(withIdentifier: "proto")!
+        let cell: UITableViewCell = course_grade_tableveiw.dequeueReusableCell(withIdentifier: "cellTableCourseAndGrade")!
         if let aCourse = cell.viewWithTag(100) as! UILabel! {
             aCourse.text = arrayOfCourse[indexPath.row]
         }
-        if let aGrande = cell.viewWithTag(101) as! UILabel! {
-            aGrande.text = String(arrayOfGrades[indexPath.row])
+        if let agrade = cell.viewWithTag(101) as! UILabel! {
+            agrade.text = String(arrayOfGrades[indexPath.row])
         }
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let name = [studentName](studentGredes.keys)[indexPath.row]
         userDefaultsObj.setKey(theValue: name as AnyObject, theKey: "name")
-        performSegue(withIdentifier: "proto", sender: nil)
+        performSegue(withIdentifier: "cellTableCourseAndGrade", sender: nil)
     }
     //---\\      *      //---\\
     func fillUpArray() {
@@ -66,39 +66,15 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
         }
     }
     //---\\      *      //---\\
-    @IBAction func addCourseAndGrande(_ sender: UIButton) {
+    @IBAction func addCourseAndgrade(_ sender: UIButton) {
         let name = student_name_label.text!
         var student_courses = studentGredes[name]!
-        student_courses[couseField.text!] = gradeCouse(grandeField.text!)
+        student_courses[couseField.text!] = gradeCouse(gradeField.text!)
         studentGredes[name] = student_courses
         userDefaultsObj.setKey(theValue: studentGredes as AnyObject, theKey: "gradeCouse")
         fillUpArray()
-        course_grande_tableveiw.reloadData()
+        course_grade_tableveiw.reloadData()
     }
     //---\\      *      //---\\
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -46,7 +46,7 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let name = [studentName](studentGredes.keys)[indexPath.row]
         userDefaultsObj.setKey(theValue: name as AnyObject, theKey: "name")
-        performSegue(withIdentifier: "seg", sender: nil)
+        performSegue(withIdentifier: "addCourseAndGrade", sender: nil)
     }
     //---\\      *      //---\\
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
