@@ -50,6 +50,18 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
         userDefaultsObj.setKey(theValue: name as AnyObject, theKey: "name")
         performSegue(withIdentifier: "cellTableCourseAndGrade", sender: nil)
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            let name = student_name_label.text!
+            var curses_and_grades = studentGredes[name]!
+            let theCourseToDelete = [couseName](curses_and_grades.keys)[indexPath.row]
+            curses_and_grades[theCourseToDelete] = nil
+            studentGredes[name] = curses_and_grades
+            userDefaultsObj.setKey(theValue: studentGredes as AnyObject, theKey: "gradeCouse")
+            fillUpArray()
+            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
+        }
+    }
     //---\\      *      //---\\
     func fillUpArray() {
         let name = student_name_label.text

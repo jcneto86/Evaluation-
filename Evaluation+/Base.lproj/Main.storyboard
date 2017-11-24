@@ -151,7 +151,7 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="addCourseAndGrande:" destination="ex6-bX-FWc" eventType="touchUpInside" id="sPl-oc-4P1"/>
+                                            <action selector="addCourseAndgrade:" destination="ex6-bX-FWc" eventType="touchUpInside" id="rTq-ul-Q2r"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Grade" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oQZ-uH-sC5">
@@ -189,9 +189,9 @@
                         <viewLayoutGuide key="safeArea" id="8En-c6-8gd"/>
                     </view>
                     <connections>
-                        <outlet property="course_grande_tableveiw" destination="40M-Mz-Cyb" id="xWp-8r-cw0"/>
+                        <outlet property="course_grade_tableveiw" destination="40M-Mz-Cyb" id="RGd-In-pM5"/>
                         <outlet property="couseField" destination="7f4-Si-Yb7" id="ftS-BW-yMD"/>
-                        <outlet property="grandeField" destination="oQZ-uH-sC5" id="ozf-so-A9K"/>
+                        <outlet property="gradeField" destination="oQZ-uH-sC5" id="g0u-YG-iZg"/>
                         <outlet property="student_name_label" destination="8gy-fl-ASO" id="jha-dD-kuD"/>
                     </connections>
                 </viewController>
