@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52AEEF761FC8A38600C77C9F /* cores.png in Resources */ = {isa = PBXBuildFile; fileRef = 52AEEF751FC8A38600C77C9F /* cores.png */; };
 		52F707201FC3597F002DF8D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7071F1FC3597F002DF8D5 /* AppDelegate.swift */; };
 		52F707221FC3597F002DF8D5 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F707211FC3597F002DF8D5 /* MainController.swift */; };
 		52F707251FC3597F002DF8D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F707231FC3597F002DF8D5 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52AEEF751FC8A38600C77C9F /* cores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cores.png; path = working/cores.png; sourceTree = SOURCE_ROOT; };
 		52F7071C1FC3597F002DF8D5 /* Evaluation+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Evaluation+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F7071F1FC3597F002DF8D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52F707211FC3597F002DF8D5 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52AEEF741FC8A36000C77C9F /* image */ = {
+			isa = PBXGroup;
+			children = (
+				52AEEF751FC8A38600C77C9F /* cores.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		52F707131FC3597F002DF8D5 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		52F7071E1FC3597F002DF8D5 /* Evaluation+ */ = {
 			isa = PBXGroup;
 			children = (
+				52AEEF741FC8A36000C77C9F /* image */,
 				52F707521FC35CA4002DF8D5 /* Controlleurs */,
 				52F707511FC35C91002DF8D5 /* Class */,
 				52F7071F1FC3597F002DF8D5 /* AppDelegate.swift */,
@@ -254,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52AEEF761FC8A38600C77C9F /* cores.png in Resources */,
 				52F7072A1FC3597F002DF8D5 /* LaunchScreen.storyboard in Resources */,
 				52F707271FC3597F002DF8D5 /* Assets.xcassets in Resources */,
 				52F707251FC3597F002DF8D5 /* Main.storyboard in Resources */,
