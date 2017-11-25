@@ -9,23 +9,23 @@
 import UIKit
 
 class MainController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
-    //---\\      *      //---\\
+    //---\\=======(*)=======//---\\
     @IBOutlet weak var student_name_tableview: UITableView!
     @IBOutlet weak var student_name_Fild: UITextField!
-    //---\\      *      //---\\
+    //---\\=======(*)=======//---\\
     let userDefaultsObj = UserDefaultsManager()
-    //---\\      *      //---\\
+    //---\\=======(*)=======//---\\
     typealias studentName = String
     typealias couseName = String
     typealias gradeCouse = Double
-    //---\\      *      //---\\
+    //---\\=======(*)=======//---\\
     var studentGredes: [studentName: [couseName: gradeCouse]]!
-    //---\\      *      //---\\
+    //---\\=======(*)=======//---\\
     override func viewDidLoad() {
         super.viewDidLoad()
         loadUserDefaults()
     }
-    //---\\      *      //---\\
+    //---\\=======(*)=======//---\\
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return studentGredes.count
     }
@@ -48,12 +48,12 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         userDefaultsObj.setKey(theValue: name as AnyObject, theKey: "name")
         performSegue(withIdentifier: "addCourseAndGrade", sender: nil)
     }
-    //---\\      *      //---\\
+    //---\\=======(*)=======//---\\
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    //---\\      *      //---\\
+    //---\\=======(*)=======//---\\
     func loadUserDefaults() {
         if userDefaultsObj.doesKeyExist(theKey: "gradeCouse") {
             studentGredes = userDefaultsObj.getValue(theKey: "gradeCouse") as! [studentName: [couseName: gradeCouse]]
@@ -61,7 +61,7 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
             studentGredes = [studentName: [couseName: gradeCouse]]()
         }
     }
-    //---\\      *      //---\\
+    //---\\=======(*)=======//---\\
     @IBAction func addstudent(_ sender: UIButton) {
         if student_name_Fild.text != "" {
             studentGredes[student_name_Fild.text!] = [couseName: gradeCouse]()
@@ -70,6 +70,7 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
             student_name_tableview.reloadData()
         }
     }
+    //---\\=======(*)=======//---\\
 }
 //---\\=======(*)=======//---\\
 
