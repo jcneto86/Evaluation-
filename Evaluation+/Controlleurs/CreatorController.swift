@@ -12,6 +12,7 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
     //---\\=======(*)=======//---\\
     let userDefaultsObj = UserDefaultsManager()
     //---\\=======(*)=======//---\\
+    @IBOutlet weak var labelGrade: UILabel!
     @IBOutlet weak var gradeField: UITextField!
     @IBOutlet weak var couseField: UITextField!
     @IBOutlet weak var student_name_label: UILabel!
@@ -24,12 +25,15 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
     var studentGredes: [studentName: [couseName: gradeCouse]]!
     var arrayOfCourse: [couseName]!
     var arrayOfGrades: [gradeCouse]!
+    var percentageGrade = [100.6, 80.5]
     //---\\=======(*)=======//---\\
     override func viewDidLoad() {
         super.viewDidLoad()
         student_name_label.text = userDefaultsObj.getValue(theKey: "name") as? String
         loadUserDefaults()
         fillUpArray()
+        print(arrayOfGrades)
+        print(arrayOfGrades)
         averageGrede()
     }
     //---\\=======(*)=======//---\\
@@ -103,5 +107,13 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
         couseField.text = ""
     }
     //---\\=======(*)=======//---\\
+    func produitCroise(dictDeNotes: [Double: Double],
+                       regleDe3: (_ somme: Double, _ sur: Double) -> Double) -> String {
+        let sommeNotes = [Double](dictDeNotes.keys).reduce(0, +)
+        let sommeSur = [Double](dictDeNotes.values).reduce(0, +)
+        let conversion = regleDe3(sommeNotes, sommeSur)
+        labelGrade.text = String(format: "Grande = %0.1f/%0.1f or %0.1/100", sommeNotes, sommeSur, conversion)
+        return String(format: "Grande = %0.1f/%0.1f or %0.1/100", sommeNotes, sommeSur, conversion)
+    }
 }
 
