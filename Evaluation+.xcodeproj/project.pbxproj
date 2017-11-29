@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		525FA78A1FCF3078002EC494 /* Champagne & Limousines.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 525FA7861FCF3077002EC494 /* Champagne & Limousines.ttf */; };
+		525FA78B1FCF3078002EC494 /* Champagne & Limousines Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 525FA7871FCF3077002EC494 /* Champagne & Limousines Bold Italic.ttf */; };
+		525FA78C1FCF3078002EC494 /* Champagne & Limousines Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 525FA7881FCF3078002EC494 /* Champagne & Limousines Bold.ttf */; };
+		525FA78D1FCF3078002EC494 /* Champagne & Limousines Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 525FA7891FCF3078002EC494 /* Champagne & Limousines Italic.ttf */; };
+		525FA78F1FCF3515002EC494 /* icons8-undo.png in Resources */ = {isa = PBXBuildFile; fileRef = 525FA78E1FCF3515002EC494 /* icons8-undo.png */; };
 		52AEEF761FC8A38600C77C9F /* cores.png in Resources */ = {isa = PBXBuildFile; fileRef = 52AEEF751FC8A38600C77C9F /* cores.png */; };
 		52AEEF781FC8A66A00C77C9F /* concordialogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52AEEF771FC8A66A00C77C9F /* concordialogo.jpg */; };
 		52F707201FC3597F002DF8D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7071F1FC3597F002DF8D5 /* AppDelegate.swift */; };
@@ -38,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		525FA7861FCF3077002EC494 /* Champagne & Limousines.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Champagne & Limousines.ttf"; sourceTree = "<group>"; };
+		525FA7871FCF3077002EC494 /* Champagne & Limousines Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Champagne & Limousines Bold Italic.ttf"; sourceTree = "<group>"; };
+		525FA7881FCF3078002EC494 /* Champagne & Limousines Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Champagne & Limousines Bold.ttf"; sourceTree = "<group>"; };
+		525FA7891FCF3078002EC494 /* Champagne & Limousines Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Champagne & Limousines Italic.ttf"; sourceTree = "<group>"; };
+		525FA78E1FCF3515002EC494 /* icons8-undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-undo.png"; sourceTree = "<group>"; };
 		52AEEF751FC8A38600C77C9F /* cores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cores.png; path = working/cores.png; sourceTree = SOURCE_ROOT; };
 		52AEEF771FC8A66A00C77C9F /* concordialogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = concordialogo.jpg; sourceTree = "<group>"; };
 		52F7071C1FC3597F002DF8D5 /* Evaluation+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Evaluation+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,9 +92,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		525FA7851FCF3050002EC494 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				525FA7871FCF3077002EC494 /* Champagne & Limousines Bold Italic.ttf */,
+				525FA7881FCF3078002EC494 /* Champagne & Limousines Bold.ttf */,
+				525FA7891FCF3078002EC494 /* Champagne & Limousines Italic.ttf */,
+				525FA7861FCF3077002EC494 /* Champagne & Limousines.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		52AEEF741FC8A36000C77C9F /* image */ = {
 			isa = PBXGroup;
 			children = (
+				525FA78E1FCF3515002EC494 /* icons8-undo.png */,
 				52AEEF771FC8A66A00C77C9F /* concordialogo.jpg */,
 				52AEEF751FC8A38600C77C9F /* cores.png */,
 			);
@@ -114,6 +136,7 @@
 		52F7071E1FC3597F002DF8D5 /* Evaluation+ */ = {
 			isa = PBXGroup;
 			children = (
+				525FA7851FCF3050002EC494 /* fonts */,
 				52AEEF741FC8A36000C77C9F /* image */,
 				52F707521FC35CA4002DF8D5 /* Controlleurs */,
 				52F707511FC35C91002DF8D5 /* Class */,
@@ -269,10 +292,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				52AEEF761FC8A38600C77C9F /* cores.png in Resources */,
+				525FA78D1FCF3078002EC494 /* Champagne & Limousines Italic.ttf in Resources */,
 				52F7072A1FC3597F002DF8D5 /* LaunchScreen.storyboard in Resources */,
+				525FA78A1FCF3078002EC494 /* Champagne & Limousines.ttf in Resources */,
+				525FA78B1FCF3078002EC494 /* Champagne & Limousines Bold Italic.ttf in Resources */,
 				52F707271FC3597F002DF8D5 /* Assets.xcassets in Resources */,
 				52AEEF781FC8A66A00C77C9F /* concordialogo.jpg in Resources */,
+				525FA78C1FCF3078002EC494 /* Champagne & Limousines Bold.ttf in Resources */,
 				52F707251FC3597F002DF8D5 /* Main.storyboard in Resources */,
+				525FA78F1FCF3515002EC494 /* icons8-undo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

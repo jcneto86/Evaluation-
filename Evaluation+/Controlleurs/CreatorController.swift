@@ -25,16 +25,14 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
     var studentGredes: [studentName: [couseName: gradeCouse]]!
     var arrayOfCourse: [couseName]!
     var arrayOfGrades: [gradeCouse]!
-    var percentageGrade = [100.6, 80.5]
     //---\\=======(*)=======//---\\
     override func viewDidLoad() {
         super.viewDidLoad()
         student_name_label.text = userDefaultsObj.getValue(theKey: "name") as? String
         loadUserDefaults()
         fillUpArray()
-        print(arrayOfGrades)
-        print(arrayOfGrades)
-        averageGrede()
+        labelGrade.text = String(format: "%0.1f", averageEvo(tabNotes: arrayOfGrades, average: {$0 / $1}))
+        
     }
     //---\\=======(*)=======//---\\
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,13 +84,10 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
         }
     }
     //---\\=======(*)=======//---\\
-    func averageGrede() {
-        fillUpArray()
-        print(arrayOfCourse)
-        print(arrayOfGrades)
-        //for i in arrayOfGrades {
-            
-        //}
+    func averageEvo(tabNotes: [Double], average: (_ sum: Double, _ nombDNotes: Double) -> Double) -> Double {
+        let sum = tabNotes.reduce(0, +)
+        let resultat = average(sum, Double(tabNotes.count))
+        return resultat
     }
     //---\\=======(*)=======//---\\
     @IBAction func addCourseAndgrade(_ sender: UIButton) {
@@ -103,17 +98,11 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
         userDefaultsObj.setKey(theValue: studentGredes as AnyObject, theKey: "gradeCouse")
         fillUpArray()
         course_grade_tableveiw.reloadData()
+        labelGrade.text = String(format: "%0.1f", averageEvo(tabNotes: arrayOfGrades, average: {$0 / $1}))
         gradeField.text = ""
         couseField.text = ""
     }
     //---\\=======(*)=======//---\\
-    func produitCroise(dictDeNotes: [Double: Double],
-                       regleDe3: (_ somme: Double, _ sur: Double) -> Double) -> String {
-        let sommeNotes = [Double](dictDeNotes.keys).reduce(0, +)
-        let sommeSur = [Double](dictDeNotes.values).reduce(0, +)
-        let conversion = regleDe3(sommeNotes, sommeSur)
-        labelGrade.text = String(format: "Grande = %0.1f/%0.1f or %0.1/100", sommeNotes, sommeSur, conversion)
-        return String(format: "Grande = %0.1f/%0.1f or %0.1/100", sommeNotes, sommeSur, conversion)
-    }
+
 }
 
