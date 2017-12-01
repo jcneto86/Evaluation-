@@ -25,6 +25,8 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
     var studentGredes: [studentName: [couseName: gradeCouse]]!
     var arrayOfCourse: [couseName]!
     var arrayOfGrades: [gradeCouse]!
+    var alertController = UIAlertController(title: "", message:
+        "", preferredStyle: UIAlertControllerStyle.alert)
     //---\\=======(*)=======//---\\
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +68,7 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
             userDefaultsObj.setKey(theValue: studentGredes as AnyObject, theKey: "gradeCouse")
             fillUpArray()
             tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
+            labelGrade.text = String(format: "%0.1f", averageEvo(tabNotes: arrayOfGrades, average: {$0 / $1}))
         }
     }
     //---\\=======(*)=======//---\\
@@ -91,16 +94,36 @@ class CreatorController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     //---\\=======(*)=======//---\\
     @IBAction func addCourseAndgrade(_ sender: UIButton) {
-        let name = student_name_label.text!
-        var student_courses = studentGredes[name]!
-        student_courses[couseField.text!] = gradeCouse(gradeField.text!)
-        studentGredes[name] = student_courses
-        userDefaultsObj.setKey(theValue: studentGredes as AnyObject, theKey: "gradeCouse")
-        fillUpArray()
-        course_grade_tableveiw.reloadData()
-        labelGrade.text = String(format: "%0.1f", averageEvo(tabNotes: arrayOfGrades, average: {$0 / $1}))
-        gradeField.text = ""
-        couseField.text = ""
+        if couseField.text == "" {
+            alertController = UIAlertController(title: "Attention!", message:
+                "Ne laissez pas les champs vides", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            print("ooooo1")
+
+        } else if gradeField.text == "" {
+            alertController = UIAlertController(title: "Attention!", message:
+                "Ne laissez pas les champs vides", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            print("ooooo3")
+        } else {
+            let name = student_name_label.text!
+            var student_courses = studentGredes[name]!
+            student_courses[couseField.text!] = gradeCouse(gradeField.text!)
+            studentGredes[name] = student_courses
+            userDefaultsObj.setKey(theValue: studentGredes as AnyObject, theKey: "gradeCouse")
+            fillUpArray()
+            course_grade_tableveiw.reloadData()
+            labelGrade.text = String(format: "%0.1f", averageEvo(tabNotes: arrayOfGrades, average: {$0 / $1}))
+            gradeField.text = ""
+            couseField.text = ""
+            
+        }
+        
+        
+        
+
     }
     //---\\=======(*)=======//---\\
 
